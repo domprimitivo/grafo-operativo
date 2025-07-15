@@ -1,0 +1,22 @@
+{
+    "titulo": "Mitigación 2, Redirección del flujo",
+    "descripcion": "Recuperación del 90%. El proceso se optimizó con un protocolo de levaduras secundarias.",
+    "etapas": [
+        "Fermentación"
+    ],
+    "riesgos": [
+        0.78
+    ],
+    "ahorro_estimado": "$35,000 pesos",
+    "Riesgos totales": {
+        "Vendimia": 0.37,
+        "Despalillado": 0.683,
+        "Fermentaci\u00f3n": 0.71,
+        "Filtrado_Etiquetado_Embotellado": 0.60,
+        "Maceraci\u00f3n": 0.79,
+        "Prensado": 0.66,
+        "Recepci\u00f3n_Uva": 0.69,
+        "Selecci\u00f3n_Mesa": 0.846,
+        "Transporte_Bodega": 0.54
+    }
+}

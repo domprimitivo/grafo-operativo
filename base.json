@@ -1,0 +1,13 @@
+{
+    "Etapa": {
+        "Despalillado": 0.683,
+        "Fermentaci\u00f3n": 0.78,
+        "Filtrado_Etiquetado_Embotellado": 0.65,
+        "Maceraci\u00f3n": 0.84,
+        "Prensado": 0.602,
+        "Recepci\u00f3n_Uva": 0.632,
+        "Selecci\u00f3n_Mesa": 0.846,
+        "Transporte_Bodega": 0.465,
+        "Vendimia": 0.37
+    }
+}

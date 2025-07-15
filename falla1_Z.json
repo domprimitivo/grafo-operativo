@@ -1,0 +1,23 @@
+{
+    "titulo": "Mitigación 3 - El Camino de la Armonía",
+    "descripcion": "Recuperación completa (100%). El riesgo regresó a su valor base. El sistema demostró resiliencia total.",
+    "etapas": [
+        "Filtrado_Etiquetado_Embotellado"
+    ],
+    "riesgos": [
+        0.65
+    ],
+    "ahorro_estimado": "$50,000 pesos",
+    "Riesgos totales": {
+        "Vendimia": 0.37,
+        "Despalillado": 0.683,
+        "Fermentaci\u00f3n": 0.78,
+        "Filtrado_Etiquetado_Embotellado": 0.65,
+        "Maceraci\u00f3n": 0.84,
+        "Prensado": 0.602,
+        "Recepci\u00f3n_Uva": 0.632,
+        "Selecci\u00f3n_Mesa": 0.846,
+        "Transporte_Bodega": 0.465,
+        
+    }
+}

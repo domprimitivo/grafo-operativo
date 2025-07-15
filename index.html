@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Demostrador de Resiliencia - Grafo Operativo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 p-6">
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">Demostrador de Resiliencia</h1>
+    <p class="mb-6">Sigue el flujo de eventos, elige una etapa para provocar una falla y observa cómo el sistema responde con resiliencia.</p>
+
+    <div class="mb-4">
+      <button onclick="loadJson('base.json', 'Estado base del sistema antes de cualquier falla.')" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800">
+        Ver Estado Inicial
+      </button>
+    </div>
+
+    <div class="space-x-4 mb-4">
+      <button onclick="loadJson('falla1.json', 'Falla 1: Embotellado - se perdieron 1000 litros de vino.')" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+        Provocar Falla 1
+      </button>
+      <button onclick="loadJson('falla2.json', 'Falla 2: Fermentación - aumento de temperatura fuera de control.')" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+        Provocar Falla 2
+      </button>
+    </div>
+
+    <div class="space-x-4 mb-4">
+      <button onclick="loadJson('falla1_X.json', 'Mitigación X: La danza del equilibrio aplicada.')" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
+        Mitigar Falla 1 (X)
+      </button>
+      <button onclick="loadJson('falla2_X.json', 'Mitigación X: La danza del equilibrio aplicada.')" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
+        Mitigar Falla 2 (X)
+      </button>
+    </div>
+
+    <div class="space-x-4 mb-4">
+      <button onclick="loadJson('falla1_Y.json', 'Mitigación Y: Los brazos del sistema amortiguan el impacto.')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Segunda Capa Falla 1 (Y)
+      </button>
+      <button onclick="loadJson('falla2_Y.json', 'Mitigación Y: Los brazos del sistema amortiguan el impacto.')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Segunda Capa Falla 2 (Y)
+      </button>
+    </div>
+
+    <div class="space-x-4 mb-6">
+      <button onclick="loadJson('falla1_Z.json', 'Mitigación Z: El camino de la armonía.')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+        Recuperación Final Falla 1 (Z)
+      </button>
+      <button onclick="loadJson('falla2_Z.json', 'Mitigación Z: El camino de la armonía.')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+        Recuperación Final Falla 2 (Z)
+      </button>
+    </div>
+
+    <div class="border-t pt-4">
+      <h2 class="text-xl font-semibold mb-2">Narrativa</h2>
+      <p id="narrativa" class="italic text-gray-700">Cargando estado inicial del sistema...</p>
+
+      <h2 class="text-xl font-semibold mt-4">Datos del Riesgo</h2>
+      <pre id="data-output" class="bg-gray-100 p-4 rounded text-sm overflow-x-auto">Cargando datos...</pre>
+    </div>
+  </div>
+
+  <script>
+    async function loadJson(filename, narrativeText) {
+      try {
+        const res = await fetch(`data/${filename}`);
+        const data = await res.json();
+        document.getElementById('narrativa').textContent = narrativeText;
+        document.getElementById('data-output').textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        document.getElementById('narrativa').textContent = 'Error al cargar el archivo.';
+        document.getElementById('data-output').textContent = '';
+      }
+    }
+
+    // Cargar automáticamente el estado base al iniciar
+    window.onload = function () {
+      loadJson('base.json', 'Estado base del sistema antes de cualquier falla.');
+    };
+  </script>
+</body>
+</html>

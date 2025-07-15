@@ -1,0 +1,23 @@
+{
+  "titulo": "Mitigación 1 - Adaptación sistémica",
+  "descripcion": "La recuperación fue del 60%. Se evitó una mayor pérdida con maniobras manuales de emergencia.",
+  "etapas": [
+    "Filtrado_Etiquetado_Embotellado"
+  ],
+  "riesgos": [
+    0.76
+  ],
+  "ahorro_estimado": "$20,000 pesos",
+  "riesgos_totales": {
+    "Vendimia": 0.37,
+    "Despalillado": 0.683,
+    "Fermentación": 0.78,
+    "Filtrado_Etiquetado_Embotellado": 0.75,
+    "Maceración": 0.74,
+    "Prensado": 0.602,
+    "Recepción_Uva": 0.632,
+    "Selección_Mesa": 0.746,
+    "Transporte_Bodega": 0.765
+    
+  }
+}
